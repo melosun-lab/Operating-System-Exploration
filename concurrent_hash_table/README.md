@@ -2,15 +2,6 @@
 
 Three versions of making a hash table implementation safe to use concurrently.
 
-## Building
-
-To build this program, simply run "make" command in ~/cs111/lab-03 directory.
-
-## Running
-
-As an example of running this program on using the `-t` and `-s` flags such that the base hash table completes in between 1-2 seconds, run "./hash-table-tester -t 8 -s 50000".
-
-
 ## First Implementation
 
 For the first implementation, we put a mutex in the hash_table_v1 struct. In other words, we have a single mutex for the entire hash table. The mutex will be initialized when we are creating the hash table. Then each thread will acquire the lock immediately after it is in the hash_table_v1_add_entry function. It will unlock after the new node is inserted if the input value does not already exist. Otherwise, it will unlock after the value is updated. This strategy is correct because there is always only one single thread that runs the critical section, which is the body part of the hash_table_v1_add_entry function since it is making write operation. Therefore, they will not be any data racing, and the hash table will not have any missing values. 
