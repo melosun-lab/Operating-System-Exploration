@@ -4,7 +4,7 @@ The implementation for round robin scheduling for a given workload and quantum l
 
 ## Building
 
-To build this program, simply run "make" command in ~/cs111/lab-02 directory. 
+To build this program, simply run "make" command.
 To define the work load, edit the processes.txt file in the same directory with the following format. The first line should specify the total number of processes to be scheduled. Then, each of the remaining line represents a process with its pid, arrival time, and burst time. For example, for a process with pid 1 arrives at t=0 and burst 3 seconds, add a line "1, 0, 3" in the file.
 
 ## Running
