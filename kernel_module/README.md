@@ -4,7 +4,7 @@ A kernel module that shows the current number of running processes.
 
 ## Building
 
-To build this kernel module, simply run "make" command in ~/cs111/lab-00. Then, insert this kernel module by running "sudo insmod proc_count.ko"
+To build this kernel module, simply run "make" command. Then, insert this kernel module by running "sudo insmod proc_count.ko"
 
 ## Running
 
